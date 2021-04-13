@@ -37,7 +37,6 @@ public class FizzBuzz {
         fizzBuzz[i] = String.valueOf(i);
       }
     }
-    //noinspection ToArrayCallWithZeroLengthArrayArgument
     return fizzBuzz;
   }
 
