@@ -25,20 +25,20 @@ public class FizzBuzz {
    * @return an array of numbers with appropriate FizzBuzz replacements
    */
   public String[] fizzBuzz(int start, int end) {
-    List<String> fizzBuzz = new LinkedList<>();
+    String[] fizzBuzz = new String[end - start];
     for (int i = start; i < end; i++) {
       if (i % 15 == 0) {
-        fizzBuzz.add("FizzBuzz");
+        fizzBuzz[i] = "FizzBuzz";
       } else if (i % 3 == 0) {
-        fizzBuzz.add("Fizz");
+        fizzBuzz[i] = "Fizz";
       } else if (i % 5 == 0) {
-        fizzBuzz.add("Buzz");
+        fizzBuzz[i] = "Buzz";
       } else { //normal number
-        fizzBuzz.add(String.valueOf(i));
+        fizzBuzz[i] = String.valueOf(i);
       }
     }
     //noinspection ToArrayCallWithZeroLengthArrayArgument
-    return fizzBuzz.toArray(new String[fizzBuzz.size()]);
+    return fizzBuzz;
   }
 
 }
